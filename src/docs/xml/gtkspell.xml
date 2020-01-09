@@ -1,0 +1,170 @@
+<refentry id="gtkspell-gtkspell">
+<refmeta>
+<refentrytitle role="top_of_page" id="gtkspell-gtkspell.top_of_page">GtkSpell</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKSPELL Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>GtkSpell</refname>
+<refpurpose>GtkSpell objects and methods.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="gtkspell-gtkspell.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkspell/gtkspell.h&gt;
+
+                    <link linkend="GtkSpell">GtkSpell</link>;
+<link linkend="GtkSpell">GtkSpell</link>*           <link linkend="gtkspell-new-attach">gtkspell_new_attach</link>                 (<link linkend="GtkTextView">GtkTextView</link> *view,
+                                                         const <link linkend="gchar">gchar</link> *lang,
+                                                         <link linkend="GError">GError</link> **error);
+<link linkend="gboolean">gboolean</link>            <link linkend="gtkspell-set-language">gtkspell_set_language</link>               (<link linkend="GtkSpell">GtkSpell</link> *spell,
+                                                         const <link linkend="gchar">gchar</link> *lang,
+                                                         <link linkend="GError">GError</link> **error);
+<link linkend="void">void</link>                <link linkend="gtkspell-recheck-all">gtkspell_recheck_all</link>                (<link linkend="GtkSpell">GtkSpell</link> *spell);
+<link linkend="GtkSpell">GtkSpell</link>*           <link linkend="gtkspell-get-from-text-view">gtkspell_get_from_text_view</link>         (<link linkend="GtkTextView">GtkTextView</link> *view);
+<link linkend="void">void</link>                <link linkend="gtkspell-detach">gtkspell_detach</link>                     (<link linkend="GtkSpell">GtkSpell</link> *spell);
+#define             <link linkend="GTKSPELL-ERROR--CAPS">GTKSPELL_ERROR</link>
+enum                <link linkend="GtkSpellError">GtkSpellError</link>;
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="gtkspell-gtkspell.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="gtkspell-gtkspell.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="GtkSpell" role="struct">
+<title>GtkSpell</title>
+<indexterm zone="GtkSpell"><primary sortas="GtkSpell">GtkSpell</primary></indexterm><programlisting>typedef struct _GtkSpell GtkSpell;</programlisting>
+<para>
+The opaque GtkSpell object.  It is created with <link linkend="gtkspell-new-attach"><function>gtkspell_new_attach()</function></link> and
+freed with <link linkend="gtkspell-detach"><function>gtkspell_detach()</function></link>.
+</para></refsect2>
+<refsect2 id="gtkspell-new-attach" role="function">
+<title>gtkspell_new_attach ()</title>
+<indexterm zone="gtkspell-new-attach"><primary sortas="gtkspell_new_attach">gtkspell_new_attach</primary></indexterm><programlisting><link linkend="GtkSpell">GtkSpell</link>*           gtkspell_new_attach                 (<link linkend="GtkTextView">GtkTextView</link> *view,
+                                                         const <link linkend="gchar">gchar</link> *lang,
+                                                         <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Create a new <link linkend="GtkSpell"><type>GtkSpell</type></link> object attached to <parameter>view</parameter> with language <parameter>lang</parameter>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>view</parameter>&#160;:</term>
+<listitem><simpara> The <link linkend="GtkTextView"><type>GtkTextView</type></link> to attach to.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lang</parameter>&#160;:</term>
+<listitem><simpara> The language to use, in a form pspell understands (it appears to
+be a locale specifier?).
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara> Return location for error.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> a new <link linkend="GtkSpell"><type>GtkSpell</type></link> object, or <link linkend="NULL--CAPS"><literal>NULL</literal></link> on error.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtkspell-set-language" role="function">
+<title>gtkspell_set_language ()</title>
+<indexterm zone="gtkspell-set-language"><primary sortas="gtkspell_set_language">gtkspell_set_language</primary></indexterm><programlisting><link linkend="gboolean">gboolean</link>            gtkspell_set_language               (<link linkend="GtkSpell">GtkSpell</link> *spell,
+                                                         const <link linkend="gchar">gchar</link> *lang,
+                                                         <link linkend="GError">GError</link> **error);</programlisting>
+<para>
+Set the language on <parameter>spell</parameter> to <parameter>lang</parameter>, possibily returning an error in
+<parameter>error</parameter>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>spell</parameter>&#160;:</term>
+<listitem><simpara>  The <link linkend="GtkSpell"><type>GtkSpell</type></link> object.
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>lang</parameter>&#160;:</term>
+<listitem><simpara> The language to use, in a form enchant understands (it appears to
+be a locale specifier?).
+</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara> Return location for error.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> FALSE if there was an error.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtkspell-recheck-all" role="function">
+<title>gtkspell_recheck_all ()</title>
+<indexterm zone="gtkspell-recheck-all"><primary sortas="gtkspell_recheck_all">gtkspell_recheck_all</primary></indexterm><programlisting><link linkend="void">void</link>                gtkspell_recheck_all                (<link linkend="GtkSpell">GtkSpell</link> *spell);</programlisting>
+<para>
+Recheck the spelling in the entire buffer.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>spell</parameter>&#160;:</term>
+<listitem><simpara>  The <link linkend="GtkSpell"><type>GtkSpell</type></link> object.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtkspell-get-from-text-view" role="function">
+<title>gtkspell_get_from_text_view ()</title>
+<indexterm zone="gtkspell-get-from-text-view"><primary sortas="gtkspell_get_from_text_view">gtkspell_get_from_text_view</primary></indexterm><programlisting><link linkend="GtkSpell">GtkSpell</link>*           gtkspell_get_from_text_view         (<link linkend="GtkTextView">GtkTextView</link> *view);</programlisting>
+<para>
+Retrieves the <link linkend="GtkSpell"><type>GtkSpell</type></link> object attached to a text view.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>view</parameter>&#160;:</term>
+<listitem><simpara> A <link linkend="GtkTextView"><type>GtkTextView</type></link>.
+</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> the <link linkend="GtkSpell"><type>GtkSpell</type></link> object, or <link linkend="NULL--CAPS"><literal>NULL</literal></link> if there is no <link linkend="GtkSpell"><type>GtkSpell</type></link>
+attached to <parameter>view</parameter>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtkspell-detach" role="function">
+<title>gtkspell_detach ()</title>
+<indexterm zone="gtkspell-detach"><primary sortas="gtkspell_detach">gtkspell_detach</primary></indexterm><programlisting><link linkend="void">void</link>                gtkspell_detach                     (<link linkend="GtkSpell">GtkSpell</link> *spell);</programlisting>
+<para>
+Detaches this <link linkend="GtkSpell"><type>GtkSpell</type></link> from its text view.  Use
+<link linkend="gtkspell-get-from-text-view"><function>gtkspell_get_from_text_view()</function></link> to retrieve a GtkSpell from a
+<link linkend="GtkTextView"><type>GtkTextView</type></link>.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>spell</parameter>&#160;:</term>
+<listitem><simpara> A <link linkend="GtkSpell"><type>GtkSpell</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="GTKSPELL-ERROR--CAPS" role="macro">
+<title>GTKSPELL_ERROR</title>
+<indexterm zone="GTKSPELL-ERROR--CAPS"><primary sortas="GTKSPELL_ERROR">GTKSPELL_ERROR</primary></indexterm><programlisting>#define GTKSPELL_ERROR gtkspell_error_quark()
+</programlisting>
+<para>
+Error domain for GtkSpell functions. Errors in this domain will be from the
+<link linkend="GtkSpellError"><type>GtkSpellError</type></link> enumeration. See <link linkend="GError"><type>GError</type></link> for information on error domains.
+</para></refsect2>
+<refsect2 id="GtkSpellError" role="enum">
+<title>enum GtkSpellError</title>
+<indexterm zone="GtkSpellError"><primary sortas="GtkSpellError">GtkSpellError</primary></indexterm><programlisting>typedef enum {
+	GTKSPELL_ERROR_BACKEND
+} GtkSpellError;
+</programlisting>
+<para>
+Currently there is only one type of error that GtkSpell can report.
+</para><variablelist role="enum">
+<varlistentry id="GTKSPELL-ERROR-BACKEND--CAPS" role="constant">
+<term><literal>GTKSPELL_ERROR_BACKEND</literal></term>
+<listitem><simpara> Spell backend reported an error.
+</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

@@ -1,0 +1,15 @@
+<indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="GtkSpell"><link linkend="GtkSpell">GtkSpell</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkSpellError"><link linkend="GtkSpellError">GtkSpellError</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtkspell-attach"><link linkend="gtkspell-attach">gtkspell_attach</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtkspell-detach"><link linkend="gtkspell-detach">gtkspell_detach</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GTKSPELL-ERROR--CAPS"><link linkend="GTKSPELL-ERROR--CAPS">GTKSPELL_ERROR</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GTKSPELL-ERROR-PSPELL--CAPS"><link linkend="GTKSPELL-ERROR-PSPELL--CAPS">GTKSPELL_ERROR_PSPELL</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtkspell-get-from-text-view"><link linkend="gtkspell-get-from-text-view">gtkspell_get_from_text_view</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtkspell-init"><link linkend="gtkspell-init">gtkspell_init</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtkspell-new-attach"><link linkend="gtkspell-new-attach">gtkspell_new_attach</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtkspell-recheck-all"><link linkend="gtkspell-recheck-all">gtkspell_recheck_all</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtkspell-set-language"><link linkend="gtkspell-set-language">gtkspell_set_language</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>
