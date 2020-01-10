@@ -1,0 +1,79 @@
+<refentry id="gtkspell-deprecated">
+<refmeta>
+<refentrytitle role="top_of_page" id="gtkspell-deprecated.top_of_page">deprecated</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GTKSPELL Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>deprecated</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="gtkspell-deprecated.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>
+
+#include &lt;gtkspell/gtkspell.h&gt;
+
+<link linkend="int">int</link>                 <link linkend="gtkspell-init">gtkspell_init</link>                       (void);
+<link linkend="void">void</link>                <link linkend="gtkspell-attach">gtkspell_attach</link>                     (<link linkend="GtkTextView">GtkTextView</link> *view);
+#define             <link linkend="GTKSPELL-ERROR-PSPELL--CAPS">GTKSPELL_ERROR_PSPELL</link>
+</synopsis>
+</refsynopsisdiv>
+
+
+
+
+
+
+
+
+
+<refsect1 id="gtkspell-deprecated.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+</para>
+</refsect1>
+
+<refsect1 id="gtkspell-deprecated.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="gtkspell-init" role="function">
+<title>gtkspell_init ()</title>
+<indexterm zone="gtkspell-init"><primary sortas="gtkspell_init">gtkspell_init</primary></indexterm><programlisting><link linkend="int">int</link>                 gtkspell_init                       (void);</programlisting>
+<para>
+This function is deprecated and included only for backward
+compatibility.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara> nothing.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="gtkspell-attach" role="function">
+<title>gtkspell_attach ()</title>
+<indexterm zone="gtkspell-attach"><primary sortas="gtkspell_attach">gtkspell_attach</primary></indexterm><programlisting><link linkend="void">void</link>                gtkspell_attach                     (<link linkend="GtkTextView">GtkTextView</link> *view);</programlisting>
+<para>
+This function is deprecated and included only for backward
+compatibility.  It calls <link linkend="gtkspell-new-attach"><function>gtkspell_new_attach()</function></link> with the default language
+and without error handling.</para>
+<para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>view</parameter>&#160;:</term>
+<listitem><simpara> a <link linkend="GtkTextView"><type>GtkTextView</type></link>.
+</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="GTKSPELL-ERROR-PSPELL--CAPS" role="macro">
+<title>GTKSPELL_ERROR_PSPELL</title>
+<indexterm zone="GTKSPELL-ERROR-PSPELL--CAPS"><primary sortas="GTKSPELL_ERROR_PSPELL">GTKSPELL_ERROR_PSPELL</primary></indexterm><programlisting>#define GTKSPELL_ERROR_PSPELL GTKSPELL_ERROR_BACKEND
+</programlisting>
+<para>
+Backward compatibility macro.
+</para></refsect2>
+
+</refsect1>
+
+
+
+
+</refentry>

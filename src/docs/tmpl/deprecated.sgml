@@ -1,0 +1,42 @@
+<!-- ##### SECTION Title ##### -->
+deprecated
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### FUNCTION gtkspell_init ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtkspell_attach ##### -->
+<para>
+
+</para>
+
+@view: 
+
+
+<!-- ##### MACRO GTKSPELL_ERROR_PSPELL ##### -->
+<para>
+Backward compatibility macro.
+</para>
+
+
+
